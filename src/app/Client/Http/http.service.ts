@@ -20,5 +20,4 @@ export class HttpService {
       map((_: T) => GenerateEither(_)),
     );
   }
-
 }

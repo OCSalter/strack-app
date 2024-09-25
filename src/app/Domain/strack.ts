@@ -10,10 +10,16 @@ export interface Group {
     name: String;
 }
 
-export interface Match {
+export interface MatchTag {
     id: UUID;
     groupId: UUID;
     modeId: UUID
+}
+
+export interface MatchPreview {
+    id: UUID;
+    modeName: string;
+    teamList: UUID[];
 }
 
 export interface TeamTag {
