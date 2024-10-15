@@ -61,6 +61,10 @@ export class MatchViewComponent implements OnInit{
     });
   }
 
+  private addPlayersToTeam(players: PlayerTag[]) {
+    
+  }
+
   private gatherUserTeamInfo(p: PlayerTag) {
     this.statService.getStatsFromReference(p.teamId).subscribe(_ => _.map(stat => this.userTeamStat.set(p.matchId, stat)))
   }
