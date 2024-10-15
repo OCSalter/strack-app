@@ -19,7 +19,7 @@ export interface MatchTag {
 export interface MatchPreview {
     id: UUID;
     modeName: string;
-    teamList: UUID[];
+    teamIdList: UUID[];
 }
 
 export interface TeamTag {
@@ -27,9 +27,29 @@ export interface TeamTag {
     matchId: UUID;
 }
 
+export interface Team {
+    id: UUID;
+    userList: User[];
+}
+
 export interface PlayerTag {
     id: UUID;
     userId: UUID;
     teamId: UUID;
     matchId: UUID;
+}
+
+export interface Stat {
+    id: UUID;
+    typeId: UUID;
+    referenceId: UUID;
+    value: number;
+}
+
+
+export interface UserMatchView{
+    matchId: UUID;
+    modeName: String;
+    teamList: Team[];
+    userTeamStat: Stat[]
 }

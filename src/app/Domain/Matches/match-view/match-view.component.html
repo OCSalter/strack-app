@@ -1,6 +1,5 @@
 <div>
     <li *ngFor="let m of matchPreviews">
-        <div>{{m.modeName}}: {{m.id}}</div>
-        
+        <app-match-entry [m]=m></app-match-entry>
     </li>
 </div>  

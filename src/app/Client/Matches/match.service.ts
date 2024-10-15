@@ -21,4 +21,8 @@ export class MatchService {
   public getMatchPreviewFromGroup(id: UUID): Observable<Either<MatchPreview[]>> {
     return this.httpService.getEntryList<MatchPreview>( this.prefix + '/previewFromGroup/' + id.toString());
   }
+
+  public getMatchPreviewFromUser(id: UUID): Observable<Either<MatchPreview[]>> {
+    return this.httpService.getEntryList<MatchPreview>( this.prefix + '/fromUser/' + id.toString())
+  }
 }
